@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riyadh Luxury Properties | Premium Real Estate Rentals</title>
     <meta name="description" content="Discover luxury properties in Riyadh. Premium villas, penthouses, and apartments for rent. Exclusive real estate rentals with world-class amenities.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Meta Tags for SEO -->
+    <meta property="og:title" content="Riyadh Luxury Properties | Premium Real Estate Rentals">
+    <meta property="og:description" content="Discover luxury properties in Riyadh. Premium villas, penthouses, and apartments for rent.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://riyadhluxuryrentals.com">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -724,44 +740,114 @@
                         <p>Emergency Services: 24/7</p>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="mailto:abdessamadtalha@outlook.com" method="post" enctype="text/plain">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name">Full Name *</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required placeholder="Enter your email">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
                     </div>
                     <div class="form-group">
-                        <label for="property-type">Property Interest</label>
+                        <label for="current-location">Current Location *</label>
+                        <select id="current-location" name="current-location" required>
+                            <option value="">Select your current location</option>
+                            <option value="morocco">Morocco</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                            <option value="other-europe">Other Europe</option>
+                            <option value="saudi-arabia">Saudi Arabia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="employment">Employment Status *</label>
+                        <select id="employment" name="employment" required>
+                            <option value="">Select employment status</option>
+                            <option value="corporate-employee">Corporate Employee</option>
+                            <option value="government-employee">Government Employee</option>
+                            <option value="consultant">Consultant/Contractor</option>
+                            <option value="business-owner">Business Owner</option>
+                            <option value="executive">Executive/C-Level</option>
+                            <option value="relocating">Relocating for Work</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Enter your company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Monthly Housing Budget (SAR) *</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Select budget range</option>
+                            <option value="10000-15000">10,000 - 15,000 SAR</option>
+                            <option value="15000-25000">15,000 - 25,000 SAR</option>
+                            <option value="25000-40000">25,000 - 40,000 SAR</option>
+                            <option value="40000-60000">40,000 - 60,000 SAR</option>
+                            <option value="60000+">60,000+ SAR</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Preferred Move-in Timeline *</label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="">Select timeline</option>
+                            <option value="immediate">Immediate (0-30 days)</option>
+                            <option value="1-3-months">1-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-12-months">6-12 months</option>
+                            <option value="exploring">Just exploring options</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="family-size">Family Size</label>
+                        <select id="family-size" name="family-size">
+                            <option value="">Select family size</option>
+                            <option value="single">Single</option>
+                            <option value="couple">Couple</option>
+                            <option value="family-1-2">Family (1-2 children)</option>
+                            <option value="family-3-4">Family (3-4 children)</option>
+                            <option value="family-5+">Large family (5+ children)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="property-type">Preferred Property Type *</label>
                         <select id="property-type" name="property-type" required>
                             <option value="">Select property type</option>
                             <option value="villa">Luxury Villa</option>
                             <option value="penthouse">Penthouse</option>
                             <option value="apartment">Luxury Apartment</option>
                             <option value="compound">Private Compound</option>
+                            <option value="flexible">Flexible/Open to options</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="budget">Monthly Budget (SAR)</label>
-                        <select id="budget" name="budget" required>
-                            <option value="">Select budget range</option>
-                            <option value="10000-20000">10,000 - 20,000 SAR</option>
-                            <option value="20000-30000">20,000 - 30,000 SAR</option>
-                            <option value="30000-50000">30,000 - 50,000 SAR</option>
-                            <option value="50000+">50,000+ SAR</option>
+                        <label for="saudi-experience">Previous Experience in Saudi Arabia?</label>
+                        <select id="saudi-experience" name="saudi-experience">
+                            <option value="">Select experience level</option>
+                            <option value="first-time">First time in Saudi Arabia</option>
+                            <option value="previous-visit">Visited before</option>
+                            <option value="lived-before">Lived in Saudi Arabia before</option>
+                            <option value="currently-there">Currently in Saudi Arabia</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements, preferred location, move-in date, etc."></textarea>
+                        <label for="message">Additional Requirements</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about specific requirements: preferred neighborhoods, schooling needs, transportation, special amenities, etc."></textarea>
                     </div>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Schedule Property Viewing</button>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Send me the free "Ultimate Riyadh Housing Guide 2025" and market updates
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Email Inquiry</button>
                 </form>
             </div>
         </div>
@@ -803,20 +889,66 @@
     </footer>
 
     <script>
-        // Form submission handler
+        // Enhanced form submission - direct email
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Let the form submit naturally to email client
             
-            // Get form data
+            // Get form data for tracking
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData);
             
-            // Here you would typically send the data to your server
-            // For now, we'll just show an alert
-            alert('Thank you for your interest! Our property specialist will contact you within 24 hours to schedule your viewing.');
+            // Calculate lead score
+            let leadScore = 0;
+            let leadTier = "Basic";
             
-            // Reset form
-            e.target.reset();
+            // Budget scoring
+            if (data.budget === "40000-60000" || data.budget === "60000+") leadScore += 40;
+            else if (data.budget === "25000-40000") leadScore += 25;
+            else if (data.budget === "15000-25000") leadScore += 15;
+            
+            // Timeline scoring
+            if (data.timeline === "immediate") leadScore += 35;
+            else if (data.timeline === "1-3-months") leadScore += 25;
+            else if (data.timeline === "3-6-months") leadScore += 15;
+            
+            // Employment scoring
+            if (data.employment === "executive" || data.employment === "corporate-employee") leadScore += 20;
+            else if (data.employment === "consultant") leadScore += 15;
+            
+            // Location scoring (international = higher value)
+            if (data['current-location'] !== "saudi-arabia") leadScore += 10;
+            
+            // Determine lead tier
+            if (leadScore >= 80) leadTier = "Premium ($300-500)";
+            else if (leadScore >= 50) leadTier = "Qualified ($150-300)";
+            else leadTier = "Basic ($50-100)";
+            
+            // Track lead generation event with tier
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'lead_generation',
+                    'event_label': leadTier,
+                    'value': leadScore
+                });
+            }
+            
+            // Show confirmation message
+            setTimeout(function() {
+                alert('Thank you! Your email client will open to send your inquiry. If it doesn\'t open automatically, please email us directly at info@riyadhluxuryrentals.com');
+            }, 1000);
+        });
+
+        // Track property card clicks
+        document.querySelectorAll('.property-card .cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const propertyName = this.closest('.property-card').querySelector('h3').textContent;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'property_interest', {
+                        'event_category': 'engagement',
+                        'event_label': propertyName
+                    });
+                }
+            });
         });
 
         // Smooth scrolling for navigation links
